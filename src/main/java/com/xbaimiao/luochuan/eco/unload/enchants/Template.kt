@@ -1,4 +1,4 @@
-package com.xbaimiao.template
+package com.xbaimiao.luochuan.eco.unload.enchants
 
 import top.mcplugin.lib.Plugin
 

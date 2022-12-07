@@ -1,5 +1,5 @@
-name: { name }
-main: { group }
+name: EcoUnloadEnchants
+main: com.xbaimiao.luochuan.eco.unload.enchants.EcoUnloadEnchants
 version: '${version}'
 author: xbaimiao
 api-version: 1.13
