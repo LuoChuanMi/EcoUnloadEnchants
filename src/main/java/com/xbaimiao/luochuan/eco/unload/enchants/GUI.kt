@@ -56,7 +56,10 @@ object GUI {
             val storageMeta = book.itemMeta as EnchantmentStorageMeta? ?: return@onClick
             val enchant = storageMeta.storedEnchants.entries.first()
 
-            item.removeEnchantment(enchant.key)
+            val meta = item.itemMeta!!
+            meta.removeEnchant(enchant.key)
+            item.itemMeta = meta
+
             player.inventory.setItemInMainHand(item)
             player.giveItem(book)
 
