@@ -3,3 +3,9 @@ main: com.xbaimiao.luochuan.eco.unload.enchants.EcoUnloadEnchants
 version: '${version}'
 author: xbaimiao
 api-version: 1.13
+depend:
+  - Vault
+commands:
+  ecounloadenchants:
+    aliases:
+      - ele
