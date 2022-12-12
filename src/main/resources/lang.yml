@@ -1,4 +1,11 @@
-item-null: "&c请手持物品打开此界面"
-item-no-enchant: "&c手持物品并没有附魔"
-enchant-success: '&a分离附魔成功'
+item-null: "룩&c请手持物品打开此界面"
+item-no-enchant: "룩&c手持物品并没有特殊附魔"
+unload-success: '루&a洗去附魔成功'
+unload-not-money: '루&c洗去附魔失败, 你没有足够的金钱'
+separate-success: '루&a分离附魔成功'
+separate-not-money: '루&c分离附魔失败, 你没有足够的金钱'
+
 player-not-online: "&c玩家{0}不在线"
+
+gui-right: '루&a右键拆卸附魔 花费&f50000ꌁ'
+gui-left: '루&a左键去除附魔 花费&a500ꌁ'
