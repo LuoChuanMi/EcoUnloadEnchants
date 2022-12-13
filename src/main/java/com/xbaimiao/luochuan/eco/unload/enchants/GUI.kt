@@ -73,11 +73,11 @@ object GUI {
                 return@onClick
             }
 
+            val book = mapping[it.rawSlot] ?: return@onClick
+
             if (!checkMoney(it.clickEvent, player)) {
                 return@onClick
             }
-
-            val book = mapping[it.rawSlot] ?: return@onClick
 
             val storageMeta = book.itemMeta as EnchantmentStorageMeta? ?: return@onClick
             val enchant = storageMeta.storedEnchants.entries.first()
