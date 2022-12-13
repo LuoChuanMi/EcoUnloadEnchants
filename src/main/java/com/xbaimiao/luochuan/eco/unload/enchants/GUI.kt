@@ -3,6 +3,9 @@ package com.xbaimiao.luochuan.eco.unload.enchants
 import com.willfp.ecoenchants.enchants.EcoEnchants
 import com.xbaimiao.easylib.giveItem
 import com.xbaimiao.easylib.sendLang
+import com.xbaimiao.luochuan.eco.unload.enchants.event.SeparateEnchantEvent
+import com.xbaimiao.luochuan.eco.unload.enchants.event.UnloadEnchantEvent
+import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.enchantments.Enchantment
 import org.bukkit.entity.Player
@@ -87,17 +90,21 @@ object GUI {
             item.itemMeta = meta
             player.inventory.setItemInMainHand(item)
 
+            if (it.clickEvent.isRightClick) {
+                val event = SeparateEnchantEvent(player, item)
+                Bukkit.getPluginManager().callEvent(event)
+                player.giveItem(book)
+                player.sendLang("separate-success")
+            } else if (it.clickEvent.isLeftClick) {
+                val event = UnloadEnchantEvent(player, item)
+                Bukkit.getPluginManager().callEvent(event)
+                player.sendLang("unload-success")
+            }
+
             if (item.enchantments.filter().isEmpty()) {
                 player.closeInventory()
             } else {
                 open(player)
-            }
-
-            if (it.clickEvent.isRightClick) {
-                player.giveItem(book)
-                player.sendLang("separate-success")
-            } else if (it.clickEvent.isLeftClick) {
-                player.sendLang("unload-success")
             }
         }
 
