@@ -2,3 +2,6 @@ title: '§f:offset_-8:寣'
 money:
   unload-enchant: 'vault:50000'
   separate-enchant: 'points:500'
+# 右击取消事件的方块列表
+blocks:
+  - 'zc/-669/81/1040'

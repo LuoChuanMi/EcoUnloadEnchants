@@ -7,5 +7,5 @@ separate-not-money: '루&c分离附魔失败, 你没有足够的金钱'
 
 player-not-online: "&c玩家{0}不在线"
 
-gui-right: '루&a右键拆卸附魔 花费&f50000ꌁ'
-gui-left: '루&a左键去除附魔 花费&a500ꌁ'
+gui-right: '루&a右键分离附魔 花费&e500ꌁ'
+gui-left: '루&a左键洗去附魔 花费&f50000ꌁ'
